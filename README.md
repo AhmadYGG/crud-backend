@@ -109,13 +109,3 @@ curl -X POST http://127.0.0.1:8000/api/products -H "Authorization: Bearer <acces
   "stock": 5
 }'
 ```
-
----
-
-## 🤝 Contributing
-Pull request sangat diterima. Untuk perubahan besar, buka issue terlebih dahulu.  
-
----
-
-## 📄 License
-Project ini dirilis di bawah [MIT License](LICENSE).  
