@@ -22,7 +22,7 @@ Project ini adalah **RESTful API** sederhana dengan fitur:
 
 1. **Clone repo**
    ```bash
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/AhmadYGG/crud-backend.git
    cd repo-name
    ```
 
