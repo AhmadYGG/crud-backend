@@ -1,0 +1,80 @@
+/* DOCUMENTATION */
+
+// register
+> POST: /api/register
+> Header
+    - Content-Type: application/json
+> Request
+    - Body 
+    {
+        "name": "admin",
+        "email": "admin@example.com",
+        "password": "admin123"
+    }
+    - (201 Created)
+
+
+// login
+> POST: /api/login
+> Request
+    - Body 
+    {
+        "name": "admin",
+        "email": "admin@example.com",
+        "password": "admin123"
+    }
+    - (200 OK)
+
+
+// melihat semua products (tanpa login)
+> GET: /api/products (menampilkan semua product)
+> Optional paramater:
+    name => search by product name
+    min_price => filter harga minimum
+    max_price => filter harga maksimum
+    sort=asc|desc => urutkan berdasarkan harga
+    > Contoh: /api/products?name=laptop&min_price=500&sort=desc
+
+
+// melihat satu product
+> GET: /api/products/{id}
+
+
+// membuat product (need login/authoriazation)
+> POST: /api/products
+> Header
+    - Authorization: Bearer <access_token>
+    - Content-Type: application/json
+> Request 
+    - Body
+    {
+        "name": "Laptop Gaming",
+        "description": "RTX 4060, RAM 16GB",
+        "price": 2000,
+        "stock": 5
+    }
+    - (201 Created)
+
+
+// update product (owner only)
+> PUT: /api/products/{id}
+> Header
+    - Authorization: Bearer <token>
+    - Content-Type: application/json
+> Request 
+    - Body (200 OK)
+    {
+        "price": 100,
+        "stock": 15
+    }
+
+
+// update product (owner only)
+> DELETE: /api/products/{id}
+> Header
+    - Authorization: Bearer <token>
+> Response (200 OK)
+    {
+        "message": "Produk berhasil dihapus"
+    }
+    
