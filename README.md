@@ -85,7 +85,6 @@ Project ini adalah **RESTful API** sederhana dengan fitur:
 ### Auth
 - `POST /api/register` → Register user baru  
 - `POST /api/login` → Login dan dapatkan token  
-- `POST /api/logout` → Logout (hapus token aktif)  
 
 ### Products
 - `GET /api/products` → Lihat semua produk (public)  
